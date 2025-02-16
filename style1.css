@@ -1,0 +1,27 @@
+
+body{
+    background-color: #000C10;
+
+}
+
+title {
+    color: aqua;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#mainlogo {
+    color: #99b2cd;
+    font-style: normal;
+    text-align: center;
+    margin-top: 0px;
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+}

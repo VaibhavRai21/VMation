@@ -1,0 +1,161 @@
+*{
+    color:#000000
+}
+
+body{
+    background-color: #000C10;
+
+}
+  
+
+.header-container {
+    display :flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+#mainlogo {
+    color: #85b4e8;
+    font-style :bold;
+    text-align :left;
+    margin-left: 20px;
+    font-family :'Comic Sans MS', cursive, sans-serif;
+}
+
+.clickable-heading {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}
+
+.clickable-heading h1 {
+    margin: 10px;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}   
+
+.dropbtn {
+    background-color: #000C10;
+    color: white;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.dropdown-content {
+    display :none;
+    position: absolute;
+    background-color: #000C10;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #000C10;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #5e5252;
+}
+
+body {
+    margin: 0;
+    font-family :'Times New Roman', Times, serif;
+}
+
+.navbar {
+    background-color: #000C10;
+    overflow: hidden;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 40px;
+    text-decoration: none;
+    font-size :larger;
+}
+
+.nav-item a:hover {
+    background-color: #2b2e45;
+    color: rgb(255, 255, 255);
+}
+.image-row {
+    display: flex;
+    justify-content: space-between; /* Change to 'center' or 'start' for tighter alignment if needed */
+    padding: 0px; /* Reduce if you want less space inside the container */
+    margin-left: 5px;
+    margin-top: 10px;   
+    margin-inline: 20px;
+}
+
+.image-row img {
+    max-width: 160px;
+    height: 240px;
+    border-radius: 0px;
+    margin-right: 2px; /* Reduce this value for less space between images */
+}
+
+  .section-title {
+    font-family: 'Arial', sans-serif;   
+    display :flex;
+    text-align: left;
+    font-size: 30px;
+    margin-top: 70px;
+    margin-left: 30px;
+    color: #d03c3c; 
+  }
+
+  .image-row2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 5px;
+    margin-top: 0px;
+    
+  }
+  
+  .image-row2 img {
+    max-width: 160px;
+    height: 220px;
+    border-radius: 8px;
+    margin-right: 2px;
+  }
+
+
+  .section-title2 {
+    display :flex;
+    text-align: left;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-left: 30px;
+    color: #d03c3c;
+    
+  }
