@@ -1,161 +1,193 @@
-*{
-    color:#000000
+
+* {
+    color: #000000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    background-color: #000C10;
-
+body {
+    background: linear-gradient(to right, #1c1d1e, #13222c);
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-  
 
+/* Header Bar */
 .header-container {
-    display :flex;
+    display: flex;
     align-items: center;
-    padding: 20px;
     justify-content: space-between;
-    margin-right: 50px;
+    background: linear-gradient(to bottom, #212324, #0b0f11);
+    padding: 15px 20px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 #mainlogo {
     color: #85b4e8;
-    font-style :bold;
-    text-align :left;
-    margin-left: 20px;
-    font-family :'Comic Sans MS', cursive, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 45px;
+    
 }
 
 .clickable-heading {
     text-decoration: none;
-    color: inherit; /* Inherit color from parent */
+    color: inherit; 
 }
 
-.clickable-heading h1 {
-    margin: 10px;
 
+.navbar {
+    display: flex;
+    align-items: center;
 }
 
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* browse list etc */
+.nav-item a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border-radius: 8px;
+}
+
+.nav-item a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Dropdown */
 .dropdown {
     position: relative;
-    display: inline-block;
-}   
+}
 
 .dropbtn {
-    background-color: #000C10;
+    font-size: 18px;
+    background: none;
+    border: 2px solid white;
     color: white;
-    font-size: 22px;
-    border: none;
+    padding: 10px 15px;
     cursor: pointer;
-    
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.dropbtn:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .dropdown-content {
-    display :none;
+    display: none;
     position: absolute;
-    background-color: #000C10;
+    right: 0;
+    background-color: #25292e;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .dropdown-content a {
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .dropdown-content a:hover {
-    background-color: #000C10;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-.dropdown:hover .dropbtn {
-    background-color: #5e5252;
-}
-
-body {
-    margin: 0;
-    font-family :'Times New Roman', Times, serif;
-}
-
-.navbar {
-    background-color: #000C10;
-    overflow: hidden;
-}
-
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav-item a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 12px 40px;
-    text-decoration: none;
-    font-size :larger;
-}
-
-.nav-item a:hover {
-    background-color: #2b2e45;
-    color: rgb(255, 255, 255);
-}
-.image-row {
-    display: flex;
-    justify-content: space-between; /* Change to 'center' or 'start' for tighter alignment if needed */
-    padding: 0px; /* Reduce if you want less space inside the container */
-    margin-left: 5px;
-    margin-top: 10px;   
-    margin-inline: 20px;
-}
-
-.image-row img {
-    max-width: 160px;
-    height: 240px;
-    border-radius: 0px;
-    margin-right: 2px; /* Reduce this value for less space between images */
-}
-
-  .section-title {
-    font-family: 'Arial', sans-serif;   
-    display :flex;
-    text-align: left;
-    font-size: 30px;
-    margin-top: 70px;
+/* Section title */
+.section-title, .section-title2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    margin-top: 300px;
     margin-left: 30px;
-    color: #d03c3c; 
-  }
+    color: #ffffff;
+}
 
-  .image-row2 {
+/* Image Rows */
+.image-row, .image-row2 {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    margin-left: 5px;
-    margin-top: 0px;
-    
-  }
-  
-  .image-row2 img {
-    max-width: 160px;
-    height: 220px;
-    border-radius: 8px;
-    margin-right: 2px;
-  }
+    gap: 15px;
+    overflow-x: auto;
+    padding: 20px 30px;
+    scrollbar-width: thin;
+    scrollbar-color: #444 #222;
+}
 
+/* Scrollbar for image rows */
+.image-row::-webkit-scrollbar, .image-row2::-webkit-scrollbar {
+    height: 8px;
+}
 
-  .section-title2 {
-    display :flex;
-    text-align: left;
-    font-size: 30px;
-    margin-top: 60px;
-    margin-left: 30px;
-    color: #d03c3c;
-    
-  }
+.image-row::-webkit-scrollbar-track, .image-row2::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+/* .image-row::-webkit-scrollbar-thumb, .image-row2::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+.image-row img, .image-row2 img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+} */
+
+.image-row img:hover, .image-row2 img:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 4px 10px rgb(100, 58, 58);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-item a {
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .image-row, .image-row2 {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .image-row img, .image-row2 img {
+        max-width: 120px;
+    }
+}
