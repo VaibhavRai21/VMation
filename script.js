@@ -5,25 +5,27 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Trending",
             containerId: "trending-images",
             images: [
-                "images/OP.jpeg",
-                "images/mha.jpeg",
-                "images/Naruto.jpeg",
-                "images/OIP.jpeg",
-                "images/ft.jpeg",
-                "images/DS.jpeg",
-                "images/aot.jpeg"
+                { src: "images/OP.jpeg", link: "https://www.youtube.com/watch?v=zwT83W6xdbg&ab_channel=AnimeAmvs" },
+                { src: "images/mha.jpeg", link: "#" }, 
+                { src: "images/Naruto.jpeg", link: "#" },
+                { src: "images/OIP.jpeg", link: "#" },
+                { src: "images/ft.jpeg", link: "#" },
+                { src: "images/DS.jpeg", link: "#" },
+                { src: "images/aot.jpeg", link: "#" },
+                { src: "images/aot.jpeg", link: "#" },
+                { src: "images/aot.jpeg", link: "#" },
+                { src: "images/aot.jpeg", link: "#" }
             ]
         },
         {
             title: "Founders Choice",
             containerId: "founders-images",
             images: [
-                "",
-                "https://via.placeholder.com/150",
-                "https://via.placeholder.com/150",
-                "https://via.placeholder.com/150",
-                "https://via.placeholder.com/150",
-                "https://via.placeholder.com/150"
+                { src: "https://i.pinimg.com/originals/b6/e6/ef/b6e6ef0ad9f7382a926575eda4a856fa.jpg", link: "#" },
+                { src: "https://i.pinimg.com/originals/b6/e6/ef/b6e6ef0ad9f7382a926575eda4a856fa.jpg", link: "#" },
+                { src: "https://i.pinimg.com/originals/b6/e6/ef/b6e6ef0ad9f7382a926575eda4a856fa.jpg", link: "#" },
+                { src: "https://i.pinimg.com/originals/b6/e6/ef/b6e6ef0ad9f7382a926575eda4a856fa.jpg", link: "#" },
+                { src: "https://i.pinimg.com/originals/b6/e6/ef/b6e6ef0ad9f7382a926575eda4a856fa.jpg", link: "#" }
             ]
         }
     ];
@@ -42,12 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
         sectionContainer.id = section.containerId;
         document.body.appendChild(sectionContainer);
 
-        // Populate images
-        section.images.forEach(src => {
+        // Populate images with links
+        section.images.forEach(image => {
+            let a = document.createElement("a");
+            a.href = image.link;
+            a.target = "_blank"; // Opens in a new tab
+
             let img = document.createElement("img");
-            img.src = src;
+            img.src = image.src;
             img.alt = `${section.title} Image`;
-            sectionContainer.appendChild(img);
+            img.style.width = "150px"; // Adjust as needed
+
+            a.appendChild(img);
+            sectionContainer.appendChild(a);
         });
     }
 
