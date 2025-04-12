@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">Vmation</h1>
+                <ul>
+                    <li><a href="#">Browse</a></li>
+                    <li><a href="#">My List</a></li>
+                    <li><a href="#">Categories</a></li>
+                </ul>
+            
+            <div class="search">
+                <a href="search/search.html">
+                    <img src="Images/search.png" alt="Search">
+                </a>
+                <img src="Images/bookmark_filled.png"></img>
+
+                <img src="Images/Generic avatar.png" alt="Avatar" class="avatar" onclick="toggleMenu()">
+
+                <!-- Menu -->
+                <div class="profile-menu" id="profileMenu">
+                <div class="menu-item"><img src="Images/Generic avatar.png"> Profile</div>
+                <div class="menu-item"><img src="Images/settings.png"> Settings</div>
+                <div class="menu-item"><img src="Images/Users.png"> Switch User</div>
+                <div class="menu-item">To Be Continued ...</div>
+                <div class="logout">Log Out</div>
+                </div>
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById("profileMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  
+    // Optional: Hide menu when clicking outside
+    window.addEventListener('click', function(e) {
+      const avatar = document.querySelector('.avatar');
+      const menu = document.getElementById('profileMenu');
+      if (!avatar.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+  
+            </div>
+        </div>
+    </header>
+
+ <!-- Banner Section -->
+ <section class="banner">
+    <div class="carousel-track" id="carouselTrack">
+      <img src="Images/daimabanner.png" class="carousel-item" alt="Banner 1">
+      <img src="Images/OPbanner.jpg" class="carousel-item" alt="Banner 2">
+      <img src="Images/pokemon.jpg" class="carousel-item" alt="Banner 3">
+
+      <img src="Images/daimabanner.png" class="carousel-item" alt="Banner 1">
+      <img src="Images/OPbanner.jpg" class="carousel-item" alt="Banner 2">
+      <img src="Images/pokemon.jpg" class="carousel-item" alt="Banner 3">
+    </div>
+  </section>
+  
+
+<!-- Image Grid Section -->
+
+<section class="image-grid" id="imageGrid"></section>
+
+
+
+        <button class="load-more"><img src="images/load.png"></button>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <p>Browse</p>
+                <p>Top Releases</p>
+            </div>
+            <div class="footer-section">
+                <h4></h4>
+                <p>Downloads</p>
+                <p>My List</p>
+            </div>
+            <div class="footer-section">
+                <h4>Help Center</h4>
+                <p>Settings</p>
+                <p>About Us</p>
+              
+                <div class="email-bar">
+                    <input type="text" placeholder="Newsletter ..." class="search-input" id="searchBox" />
+                    <button class="send-button">Send!</button>
+                  </div>
+                  
+              </div>
+              
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

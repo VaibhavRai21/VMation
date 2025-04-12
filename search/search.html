@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Anime</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgb(36, 75, 110), rgb(25, 35, 35));
+    }
+
+    .search-container {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px 45px 12px 15px;
+      border: 2px solid #ccc;
+      border-radius: 25px;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    .search-input:focus {
+      border-color: #007BFF;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" placeholder="Search Here ..." class="search-input" id="searchBox" />
+    <img src="https://static.vecteezy.com/system/resources/previews/014/441/074/original/search-icon-design-in-blue-circle-png.png" alt="Search Icon" class="search-icon" id="searchIcon" />
+  </div>
+
+  <script>
+    document.getElementById('searchIcon').addEventListener('click', function () {
+      const query = document.getElementById('searchBox').value;
+      alert("You searched for: " + query);
+      // Replace with real search logic if needed
+    });
+  </script>
+</body>
+</html>
