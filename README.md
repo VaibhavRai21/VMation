@@ -1,2 +1,2 @@
 # VMation
-It is a basic video streaming platform clone for anime lovers.
+It is confidential understand via code 😂😂😂😂
