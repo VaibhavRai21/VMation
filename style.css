@@ -43,14 +43,12 @@ body {
        
 }
 
-.logo {
-    margin-right: auto;  /* Pushes logo to the left */
-    padding: 5pxpx;
-    font-size: 24px;
+.logo a {
+    text-decoration: none;
+    color: rgb(143, 217, 254);
+    font-size: 32px;
     font-weight: bold;
-    color: rgb(104, 179, 245);
-
-}
+  }
 /* Navbar Section */
 .navbar ul {
     list-style: none;
@@ -79,7 +77,7 @@ body {
     display: none;
     position: absolute;
     right: 10px;
-    top: 60px;
+    top: 70px;
     background-color: #2d373e;
     padding: 10px 100px 5px 0px;
     border-radius: 10px;

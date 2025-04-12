@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vmation</title>
+    <link rel="icon" type="image/png" href="https://tinyurl.com/titlelogo1">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="navbar">
-            <h1 class="logo">Vmation</h1>
+            <h1 class="logo"><a href="https://www.crunchyroll.com/">Vmation</a></h1>
+
                 <ul>
                     <li><a href="#">Browse</a></li>
                     <li><a href="#">My List</a></li>
-                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Settings</a></li>
                 </ul>
             
             <div class="search">
@@ -23,7 +25,6 @@
                 <img src="Images/bookmark_filled.png"></img>
 
                 <img src="Images/Generic avatar.png" alt="Avatar" class="avatar" onclick="toggleMenu()">
-
                 <!-- Menu -->
                 <div class="profile-menu" id="profileMenu">
                 <div class="menu-item"><img src="Images/Generic avatar.png"> Profile</div>
@@ -37,8 +38,7 @@
       const menu = document.getElementById("profileMenu");
       menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
-  
-    // Optional: Hide menu when clicking outside
+    //Hide menu when clicking outside
     window.addEventListener('click', function(e) {
       const avatar = document.querySelector('.avatar');
       const menu = document.getElementById('profileMenu');
